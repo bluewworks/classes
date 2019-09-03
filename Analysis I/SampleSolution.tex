@@ -1,0 +1,73 @@
+\documentclass{amsart}
+\usepackage{amssymb}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{claim}{Claim}
+\newtheorem{corollary}{Corollary}
+\newtheorem{axiom}{Axiom}
+\newtheorem{example}{Example}
+\newtheorem{exercise}{EXERCISE}
+\newtheorem{lemma}{Lemma}
+\newtheorem{question}{Question}
+
+\newcommand{\dom}{\text{dom}}
+\newcommand{\ran}{\text{ran}}
+\newcommand{\cof}{\text{cof}}
+
+\begin{document}
+\centerline{\Large \bf Real Analysis I} 
+
+\vskip 13pt
+
+\centerline{\large \bf Sample Solutions}
+
+\vskip 13pt
+
+\noindent{\bf Exercise} Suppose that $f:A\rightarrow B$ and $g:B\rightarrow C$ are bijections. Prove that $g\circ f$ is a bijection. 
+
+\vskip 6pt
+
+\noindent{\bf Solution}: To prove that $g\circ f$ is a bijection we need to prove that it is both injective (aka ``one-to-one'') and surjective (aka ``onto'').
+
+To prove injective, suppose that $x\not= y$ are arbitrary elements of $A$. Then, since $f$ is injective, it follows that $f(x)\not=f(y)$. And since $g$ is injective it follows that $g(f(x))\not=g(f(y))$. Therefore, since $g\circ f(x) =g(f(x))$ and $g\circ f(y)=g(f(y))$, it follows that $g(f(x))\not = g(f(y))$ as required.  And since $x$ and $y$ were arbitrary, it follows that $g\circ f$ is injective. 
+
+To prove that $g\circ f$ is surjective, suppose that $c\in C$ is arbitrary. Since $g$ is surjective, we may fix $b\in B$ such that $g(b)=c$. And since $f$ is surjective, we may fix $a\in A$ such that $f(a)=b$.  Thus, $g\circ f (a)=g(f(a))=g(b)=c$. And since $c$ was arbitrary, it follows that $g\circ f$ is surjective. 
+\hfill$\Box$
+\vskip 13pt
+\noindent{\bf Exercise} Prove by induction that every natural numbers are either even or odd. 
+
+\vskip 6pt
+
+\noindent{\bf Solution}: To prove that every natural number is either even or odd we first prove the base case:
+
+\noindent BASE CASE. $1$ is odd since $1=2\cdot 0+1$.
+
+Next we prove the induction step:
+
+\noindent INDUCTIVE STEP. Suppose that $n$ is a natural number and $n$ is either even or odd.  To prove the same for $n+1$ we consider cases
+
+\noindent CASE 1. $n$ is even. Therefore there is a $k$ such that $n=2\cdot k$. But then $n+1=2\cdot k +1$ and so $n+1$ is odd. 
+
+\noindent CASE 2. $n$ is odd. Therefore there is a $k$ such that $n=2\cdot k +1$. But then $n+1=(2\cdot k +1)+1=2\cdot(k+1)$ and so $n+1$ is even. 
+
+Therefore, by the Principle of Induction, every natural number is either even or odd. \hfill$\Box$
+
+\vskip 13pt
+\noindent{\bf Exercise} The number $\sqrt{2}$ is not rational. 
+
+\vskip 6pt
+\noindent{\it Solution}. The main fact we will use is that if the square of an integer is even then the number must be even. I.e., If $a$ is an integer and if $a^2$ is even, then $a$ is even. I leave this for you to prove. 
+
+Now, suppose by way of contradiction that $\sqrt{2}$ is a rational number and write $\sqrt{2}={n\over m}$ so that $n$ and $m$ have no common factors. Therefore, either $m$ or $n$ must be odd. 
+
+So then, $2={m^2\over n^2}$ and hence $m^2=2n^2$. 
+
+Therefore $m^2$ is even and so, as mentioned above, $m$ is even. So we can fix $k$ such that $m=2k$. Thus $m^2=4k^2$ and so we have that
+$4k^2=2n^2$. Simplifying this expression leaves $n^2=2k^2$. And, as above, we conclude that $n$ is even. But this contradicts our assumption that $n$ and $m$ have no common factors. 
+\hfill$\Box$.
+
+\end{document}
+
+
+
